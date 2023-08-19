@@ -1,0 +1,39 @@
+header{
+    float:left;
+    border:1px solid black;
+    height:100px;
+    width:90%;
+}
+.enc{
+    padding-left:10px;
+}
+.logo{
+    float:right;
+    border-top:1px solid black;
+    border-right:1px solid black;
+    border-bottom:1px solid black;
+    height:100px;
+    width: 9.5%;
+}
+nav{
+    float:left;
+    border-left:1px solid black;
+    border-right:1px solid black;
+    height: 500px;
+    width:29.6%;
+}
+main{
+    float:right;
+    border-right:1px solid black;
+    height:500px;
+    width:70%;
+}
+footer{
+    float:left;
+    border-top:1px solid black;
+    border-left:1px solid black;
+    border-bottom:1px solid black;
+    border-right:1px solid black;
+    height:100%;
+    width:100%;
+}
