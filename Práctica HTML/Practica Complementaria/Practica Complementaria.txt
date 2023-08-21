@@ -1,0 +1,22 @@
+1. 1. 
+Es gratuito
+Código más ordenado
+Compatibilidad en navegadores
+Almacenamiento mejorado
+Diseño responsive
+
+1. 2. 
+Porque es el éstandar de estructuración de páginas web hoy en día y es interpretado por todos los navegadores.
+
+2. Audio:
+Soporta:
+WAV, MP3, AAC, WebM
+
+3. Video:
+Soporta:
+MP4, WebM, Ogg
+
+
+
+
+
