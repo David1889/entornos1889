@@ -1,0 +1,45 @@
+/*Ej 1*/
+h1 strong{
+    color:red;
+}
+
+/*Ej 2*/
+div p *[href]{
+    color:black;
+}
+
+/*Ej 3*/
+div.ultimo ul{
+    color: yellow;
+
+
+}
+
+div.ultimo *[href]{
+    color: blue;
+}
+
+/*Ej 4*/
+#importante{
+    color:green;
+}
+
+h1#importante{
+    color:red;
+}
+
+/*Ej 5*/
+h1[title]{
+    color:blue;
+}
+
+/*Ej 6*/
+ol a[href]:visited{
+    color:blueviolet;
+    text-decoration: none;
+}
+
+ol a[href]{
+    color:blue;
+    text-decoration: none;
+}

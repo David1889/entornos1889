@@ -1,0 +1,164 @@
+Ejercicio 1: Responder
+1. ¿ Qué es CSS y para qué se usa?
+
+CSS son las siglas de Cascade Style Sheet que traducido significa hojas de estilo en
+cascada. Las hojas de estilo es una tecnología que nos permite controlar la apariencia de una
+página web.
+CSS se utiliza para dar estilo a documentos HTML y XML, separando el contenido de la
+presentación. Los Estilos definen la forma de mostrar los elementos HTML y XML.
+CSS permite a los desarrolladores Web controlar el estilo y el formato de múltiples
+páginas Web al mismo tiempo. Cualquier cambio en el estilo marcado para un
+elemento en la CSS afectará a todas las páginas vinculadas a esa CSS en las que
+aparezca ese elemento.
+
+2. CSS utiliza reglas para las declaraciones de estilo, ¿cómo funcionan?
+
+CSS funciona a base de reglas, es decir, declaraciones sobre el estilo de uno o más
+elementos. Las hojas de estilo están compuestas por una o más de esas reglas aplicadas a un documento HTML o XML. La regla tiene dos partes: un selector y la
+declaración. A su vez la declaración está compuesta por una propiedad y el valor que
+se le asigne. El selector funciona como enlace entre el documento y el estilo, especificando los
+elementos que se van a ver afectados por esa declaración.
+La declaración es la parte de la regla que establece cuál será el efecto
+
+3. ¿ Cuáles son las tres formas de dar estilo a un documento?
+
+Las tres formas de dar estilo a un documento son las siguientes:
+-Utilizando una hoja de estilo externa que estará vinculada a un documento a través del elemento <link>, el cual debe ir situado en la sección <head>.
+-Utilizando el elemento <style>, en el interior del documento al que se le quiere dar estilo,y que generalmente se situaría en la sección <head>. De esta forma los estilos serán reconocidos antes de que la página se cargue por completo.
+-Utilizando estilos directamente sobre aquellos elementos que lo permiten a través del atributo <style> dentro de <body>. Pero este tipo de estilo pierde las ventajas que ofrecen las hojas de estilo al mezclarse el contenido con la presentación.
+
+4. ¿ Cuáles son los distintos tipos de selectores más utilizados? Ejemplifique cada uno.
+-Selector de elementos: h2{color:green;}
+-Agrupación de selectores: h2,p{color:green;}
+-Selector universal(*): *{margin:0;}
+-Selector de clase: .clase1{color:green;font-size:40px}
+-Selector ID:#hola{background: red;}
+-Selectores descendientes:h2 er{color:green;}
+
+5. ¿ Qué es una pseudo-clase? ¿Cuáles son las más utilizadas aplicadas a vínculos?
+
+Una pseudo-clase es un selector que marca los elementos que están en un estado específico, por ejemplo, los que son el primer elemento de su tipo, o aquellos por los que el cursor les pasa por encima.
+Tienden a actuar como si hubieras aplicado una clase en una parte determinada del documento y, a menudo, ayudan a reducir el exceso de clases y proporcionan un marcado más flexible y fácil de mantener. Están precedidas por : .
+Las más utilizadas son :empty, :first-child, :last-child, :first-of-type, :last-of-type, :nth-child, link, :visited, :focus, :hover, :active.
+
+6. ¿ Qué es la herencia?
+
+La herencia permite declarar propiedades en elementos de nivel alto y que estas propiedades se transmitan a todos los elementos descendientes. Sólo algunas propiedades se heredan por defecto, pero la herencia puede forzarse mediante la palabra clave inherit.
+
+7. ¿ En qué consiste el proceso denominado cascada?
+
+El proceso cascada es un mecanismo simple que describe cómo se va a mostrar un documento en la pantalla, o cómo se va a imprimir, o incluso cómo va a ser pronunciada la información presente en ese documento a través de un dispositivo de lectura. Esta forma de descripción de estilos ofrece a los desarrolladores el control total sobre estilo y formato de sus documentos. 
+
+
+Ejercicio 2: Analizar el siguiente código señalando declaraciones y aplicaciones de reglas, y su efecto. 
+
+
+
+p#normal {
+font-family: arial,helvetica; 
+font-size: 11px; 
+font-weight: bold; 
+} 
+
+*#destacado { 
+border-style: solid; 
+border-color: blue; 
+border-width: 2px; 
+} 
+#distinto { 
+background-color: #9EC7EB; 
+color: red;
+}
+
+<p id="normal">Este es un párrafo</p>
+<p id="destacado">Este es otro párrafo</p>
+<table id="destacado"><tr><td>Esta es una tabla</td></tr></table>
+<p id="distinto">Este es el último párrafo</p>
+
+A todos los párrafos que tengan el id normal les cambia la fuente a arial,helvetica, el tamaño de fuente a 11px y la letra a negrita.
+
+A cualquier elemento que tenga la id destacado se le aplica un borde con linea recta, de color azul y con tamaño de 2px.
+
+A cualquier elemento que tenga la id distinto se le aplica un fondo de color celeste y aplica el color rojo a la tipografia.
+
+Ejercicio 3
+Analizar el siguiente código señalando declaraciones y aplicaciones de reglas, y su efecto.
+
+p.quitar {
+color: red;
+}
+*.desarrollo {
+font-size: 8px;
+}
+.importante {
+font-size: 20px;
+}
+
+<p class="desarrollo">
+En este primer párrafo trataremos lo siguiente:
+<br />xxxxxxxxxxxxxxxxxxxxxxxxx
+</p>
+<p class="quitar">
+Este párrafo debe ser quitado de la obra…
+<br />xxxxxxxxxxxxxxxxxxxxxxxxx
+</p>
+<p >
+En este otro párrafo trataremos otro tema:<br />
+xxxxxxxxxxxxxxxxxxxxxxxxx
+</p>
+<p class="importante">
+Y este es el párrafo más importante de la obra…
+<br />xxxxxxxxxxxxxxxxxxxxxxxxx
+</ p>
+<h1 class="quitar">Este encabezado también debe ser quitado de la obra</h1>
+<p class="quitar importante">Se pueden aplicar varias clases a la vez</p>
+
+A todos los párrafos con la clase quitar se les cambia el color de letra a rojo. Por lo tanto a h1 no le cambiara el formato pues no es un párrafo. 
+
+A todos los elementos con la clase desarrollo se les cambia el tamaño de fuente a 8px.
+
+
+A todos los elementos con la clase importante se les cambia el tamaño de fuente a 20px.
+
+Ejercicio 4 Dadas las siguientes declaraciones:
+
+* {color:green; }
+a:link {color:gray }
+a:visited{color:blue }
+a:hover {color:fuchsia }
+a:active {color:red }
+p {font-family: arial,helvetica;font-size: 10px;color:black; }
+.contenido{font-size: 14px;font-weight: bold; }
+
+<body>
+<p class="contenido" style="font-weight: normal;">
+Este es un texto ...............</p>
+<table>
+<tr>
+<td>Y esta es una tabla.......</td>
+</tr>
+<tr>
+<td><a href="http://www.google.com.ar">con un
+enlace</a></td>
+</tr>
+</table>
+</body>
+
+<body class="contenido">
+<p> Este es un texto................</p>
+<table>
+<tr>
+<td>Y esta es una tabla.......</td>
+</tr>
+<tr>
+<td><a href="http://www.google.com.ar">con
+un enlace</a></td>
+</tr>
+</table>
+</body>
+
+
+En el primer código, el párrafo cambia el tamaño de fuente a 14px por tener la clase contenido pero su tipo de fuente no cambia a negrita ya que el style que tiene la etiqueta posee prioridad,por lo tanto el tipo de fuente será normal. Mientras que en el segundo código al no tener el style su tipo de fuente si cambia a negrita.
+
+
+
