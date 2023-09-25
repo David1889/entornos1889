@@ -1,0 +1,61 @@
+1.
+ 
+<?php
+function doble($i) {
+ return $i*2;
+}
+$a = TRUE; (boolean)
+$b = "xyz";(string)
+$c = 'xyz'; (string)
+$d = 12; (integer)
+echo gettype($a);
+echo gettype($b);
+echo gettype($c);
+echo gettype($d);
+if (is_int($d)) {
+ $d += 4;
+}
+if (is_string($a)) {
+ echo "Cadena: $a";
+}
+$d = $a ? ++$d : $d*3;
+$f = doble($d++); (integer)
+$g = $f += 10; (integer)
+echo $a, $b, $c, $d, $f , $g;
+?> 
+
+Variables: $a $b $c $d $f $g  $i
+Operadores: * = += ?: ++
+Funciones y parámetros:  functio doble($i) echo gettype($a) is_int($d) is_string($a) echo “Cadena: ” 
+Estructuras de control: if{}
+Salida por pantalla:  booleanstringstringinteger1xyzxyz184444
+
+
+
+2. 
+Los tres códigos logran el mismo resultado de imprimir los números del 1 al 10, pero utilizan diferentes estructuras de control en PHP para hacerlo, el primero lo realiza con un while tradicional verificando la instrucción antes de ejecutar el código; En el segundo, se utilizan las etiquetas “while” y “endwhile” para marcar el comienzo y el fin del bloque, al igual que el anterior verifica la instrucción antes de ejecutar el código. En el último se utiliza un “do-while” ejecutando el código al menos una vez antes de verificar la condición.
+Los cuatro ejemplos utilizan bucles "for" para imprimir los números del 1 al 10, pero difieren en la forma en que están estructurados y en cómo controlan las condiciones de detención. En el ejemplo 1 el bucle se ejecutará mientras la condición “$i <= 10” sea verdadera y “$i” se incrementará en cada iteración. En el ejemplo 2 es prácticamente igual que al anterior, la diferencia está en que en éste ejemplo el incremento se realiza dentro de la condición del bucle. En el ejemplo 3 el bucle "for" tiene una condición en blanco, lo que significa que no hay una condición de detención en el bucle. En cambio, se utiliza una declaración "if" para verificar si “$i” ha superado el valor de 10, y si es así, se rompe el bucle con “break”. Esto resulta en un bucle infinito que solo se detiene cuando “$i” es mayor que 10. En último ejemplo se utiliza un bucle "for" sin ninguna parte de inicialización, condición o incremento especificados dentro del bucle, en su lugar, se inicializa $i antes del bucle y se incrementa dentro del bucle, al igual que el Ejemplo 3, esto resulta en un bucle infinito que se detiene cuando $i es mayor que 10 utilizando la declaración "if" y break.
+Ambos ejemplos, tienen el mismo propósito, que es imprimir un mensaje basado en el valor de la variable $i, pero utilizan estructuras de control diferentes. La principal diferencia entre estos dos ejemplos radica en la estructura de control utilizada, el primer ejemplo utiliza una serie de declaraciones "if" y "elseif" para verificar y ejecutar acciones basadas en múltiples condiciones, mientras que el segundo utiliza un "switch" para comparar un valor con múltiples casos y ejecutar acciones basadas en la coincidencia de esos casos. 
+
+3. a. El código crea una tabla de 5 filas y 2 columnas en blanco.
+3. b. El código permite el ingreso de una edad, y devuelve “Menor de edad” para inputs menores a 21, y devuelve “Mayor de edad” para inputs mayores o iguales a 21.
+
+4. El código muestra un error al mostrar la primera salida ya que las variables a mostrar no han sido definidas previamente. Mientras que en la segunda salida muestra “El clavel blanco” ya que las variables han sido definidas al llamar al archivo datos.php.
+
+
+5. Este código PHP realiza un seguimiento del número de visitas a la página web utilizando un archivo de texto “contador.dat”. Cada vez que alguien accede a la página, el contador se incrementa en 1, y el nuevo valor se almacena en el archivo. Luego, el valor del contador se muestra en la página web para que los visitantes puedan ver cuántas veces se ha visitado la página.
+
+
+PHP: arrays, funciones
+
+Ambos códigos son equivalentes. La diferencia entre ambas radica en que el primero utiliza la forma asociativa  y el segundo la forma indexada.
+
+
+a) La salida es “bar1”, ya que muestra en pantalla el contenido del array llamado matriz con los identificadores “x” y 12.
+b) La salida es 5942, ya que muestra en pantalla el contenido del array llamado matriz, que a su vez contiene otro array llamado “unamatriz” con los identificadores 6, 13, y “a”.
+c) No hay salida, lo que hace el código es crear un array para posteriormente eliminarlo. 
+
+
+a) La salida es: Has entrado en esta página a las 23 horas, con 37 minutos y 2 segundos, del 25/9/2023.
+b) La salida es: 5+6=11
+
