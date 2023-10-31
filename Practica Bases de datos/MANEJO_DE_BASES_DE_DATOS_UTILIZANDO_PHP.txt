@@ -1,0 +1,97 @@
+Entornos Gráficos
+
+ 
+MANEJO DE BASES DE DATOS UTILIZANDO PHP
+
+
+  Especialidad: Ingeniería en Sistemas de información
+
+
+Alumno/s:
+
+Degiusti Florencia
+Delgado David
+Colman Gerónimo
+Munne Facundo N.
+
+
+Legajo/s:
+
+51794
+50552
+      51358
+   50361
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Año de cursado: 2023
+Corte: 2do cuatrimestre
+1. 
+
+1. Completar:
+
+1.1  Consulta a una base de datos: Para comenzar la comunicación con un servidor de base de datos MySQL, es necesario abrir una conexión a ese servidor. Para inicializar esta conexión, PHP ofrece la función: mysqli_connect(mysql_connect). Para servidores no actualizados (versiones anteriores a PHP 5) usar mysql_connect.
+
+1.1.1 Todos sus parámetros son opcionales, pero hay tres de ellos que generalmente son necesarios:
+* $hostname: nombre para el servidor
+* $nombreUsuario: nombre de usuario para la conexión a la base de datos.
+* $contraseña: la contraseña asociada con el nombre de usuario.
+
+1.2  Una vez abierta la conexión, se debe seleccionar una base de datos para su uso, mediante la función:  mysqli_select_db (mysql_select_db). Para servidores no actualizados debe usar mysql_select_db ($nombreBaseDatos, $nombreConexión);
+
+1.2.1 Esta función debe pasar como parámetro: El nombre de la base de datos
+
+1.3  La función mysqli_query () se utiliza para: ejecutar una consulta a la base de datos que especifiquemos.
+
+1.3.1 requiere como parámetros: La conexión previamente abierta (resultado de mysqli_connect ()). La consulta SQL que deseas ejecutar.
+
+1.4  La cláusula or die () se utiliza para capturar un error y finalizar el script
+
+1.4.1 y la función mysqli_error () se puede usar para devolver el último mensaje de error para la llamada más reciente a una función de MySQLi que puede haber sido ejecutada con éxito o haber fallado.
+
+1.5  Si la función mysqli_query () es exitosa, el conjunto resultante retornado se almacena en una variable, por ejemplo $vResult, y a continuación se puede ejecutar el siguiente código (explicarlo):
+<?php
+while ($fila = mysqli_fetch_array($vResultado))
+{
+?>
+<tr>
+ <td><?php echo ($fila [0]); ?></td>
+ <td><?php echo ($fila[1]); ?></td>
+ <td><?php echo ($fila[2']); ?></td>
+</tr>
+<tr>
+ <td colspan="5">
+<?php
+}
+mysqli_free_result($vResultado);
+mysqli_close($link);
+?>
+
+
+
+Se inicia un bucle while que recorre cada fila del conjunto de resultados. La función mysqli_fetch_array($vResultado) se utiliza para obtener una fila del conjunto de resultados y almacenarla en la variable $fila. Esta función devuelve la fila actual como un arreglo.
+Se abre una etiqueta HTML <tr> para crear una nueva fila en una tabla.
+Dentro de la fila, se utilizan las etiquetas HTML <td> para crear celdas. En este caso, se muestra información de las columnas de la fila actual del conjunto de resultados. Los valores se imprimen en las celdas de la tabla utilizando echo.
+Después de mostrar los valores de las tres columnas en una fila, se cierra la etiqueta </tr> para finalizar la fila actual.
+Se crea una nueva fila con un solo <td> con un colspan de 5. Esto crea una fila vacía en la tabla, aparentemente con el propósito de separar visualmente las filas de datos.
+El bucle while continúa repitiendo este proceso para cada fila en el conjunto de resultados hasta que no haya más filas que mostrar.
+Después de procesar todas las filas, se libera la memoria utilizada por el conjunto de resultados utilizando mysqli_free_result($vResultado).
+Finalmente, se cierra la conexión a la base de datos utilizando mysqli_close($link), donde $link es la variable que se usa para almacenar la conexión a la base de datos.
+En resumen, este código PHP se utiliza para mostrar los resultados de una consulta de base de datos MySQL en una tabla HTML. Después de mostrar todos los datos, se liberan los recursos y se cierra la conexión a la base de datos.
